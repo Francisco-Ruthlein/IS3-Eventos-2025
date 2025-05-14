@@ -1,4 +1,8 @@
 # Api del proyecto
 
-def main()
+def login(user: string):
+    return "token"
+
+
+def main():
     return "hola"
