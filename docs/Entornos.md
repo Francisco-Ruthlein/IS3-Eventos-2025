@@ -223,7 +223,7 @@ Qué tiene este archivo?
 El paso siguiente va a ser construir e instanciar los contenedores:
 
 ~~~ bash
-docker-compose up --build
+docker compose up --build
 ~~~
 
 ### Ajustes de seguridad

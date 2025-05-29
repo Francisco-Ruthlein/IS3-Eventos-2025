@@ -9,9 +9,6 @@ COPY requirements.txt .
 # Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el resto de los archivos de la aplicación al contenedor
-COPY . .
-
 # Expone el puerto en el que correrá la aplicación
 EXPOSE 8000
 
