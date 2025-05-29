@@ -49,8 +49,8 @@ python -m pip freeze > requirements.txt
 Eso va a generar un archivo .txt con todas las librerías y sus respectivas versiones instaladas en el entorno en cuestión. Ese archivo podrá ser uitlizado como fuente para replicar el entorno en otro equipo, por ejemplo:
 
 ~~~ bash
-python -m pip venv .env --prompt="nombre_proyecto_en_otro_equipo"
-source .env/bin/activate
+python -m venv .venv --prompt="nombre_proyecto_en_otro_equipo"
+source .venv/bin/activate
 python -m pip install -r requirements.txt
 ~~~
 
