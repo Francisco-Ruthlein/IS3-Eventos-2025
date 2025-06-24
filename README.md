@@ -12,7 +12,22 @@ El proyecto se puede observar en [este enlace](https://github.com/users/tinxo/pr
 
 ## Gestión de entornos
 
-En este caso, se empezó por el desarrollo del paso a paso que se podría seguir para la gestión de entornos de ejecución de un proyecto. Considerando un proyecto que va a utilizar FastAPI en su backend con una base de datos PostgreSQL. La progresión fue la siguiente:
+En este caso, se empezó por el desarrollo del paso a paso que se podría seguir para la gestión de entornos de ejecución de un proyecto, el documento de referencia se encuentra en la carpeta [docs](docs/Entornos.md). Considerando un proyecto que va a utilizar FastAPI en su backend con una base de datos PostgreSQL. La progresión fue la siguiente:
 1. Gestionar dependencias de librerías con el módulo venv de Python.
-2. Generar un Dockerfile para una imagen de Docker a utilizar para el proyecto (principalmente backend en esta instancia).
-3. Generar un archivo yml docker-compose para definir los servicios del backend (la API) y de persistencia (base de datos PostgreSQL y PgAdmin para visualización).
+2. Generar un [Dockerfile](Dockerfile) para una imagen de Docker a utilizar para el proyecto (principalmente backend en esta instancia).
+3. Generar un archivo yml [docker-compose](docker-compose.yml) para definir los servicios del backend (la API) y de persistencia (base de datos PostgreSQL y PgAdmin para visualización).
+
+## Gestión de calidad
+
+En este tema se tratan dos aspectos: [pruebas](docs/Pruebas.md) y [observabilidad](docs/Observabilidad.md) del producto. Se han generado documentos guía al respecto.
+
+### Pruebas
+
+Para el abordaje del tema de testing se mantiene el mismo escenario, pero se incluyen algunos ejemplos básicos para contextualizar en la carpera **examples**:
+- [Calculos.py](examples/calculos.py): una función simple de suma con algunas validaciones.
+- [Liquidaciones.py](examples/liquidacion.py): un conjunto de funciones para liquidar el sueldo de un empleado promedio.
+
+Los tests propiamente dichos, se han generado en la carpeta **test** los archivos que ejecutan las pruebas y en una carpeta denominada **features** lo necesario para la implementación de BDD.
+
+### Observabilidad
+
