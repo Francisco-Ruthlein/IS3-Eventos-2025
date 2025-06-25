@@ -1,4 +1,4 @@
-from app.calculos import suma
+from example.calculos import suma
 import pytest
 
 # def test_suma():

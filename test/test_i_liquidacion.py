@@ -4,7 +4,7 @@
 # conda install pytest
 
 import pytest
-import app.liquidacion as lq
+import example.liquidacion as lq
 
 def setup():
     # Se define en esta clase una instancia de la clase a testear
