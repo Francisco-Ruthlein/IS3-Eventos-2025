@@ -13,7 +13,7 @@ class Liquidacion():
         self.valor_hora = p_valor_hora
         self.pct_bonificacion = p_pct_bonificacion
         self.pct_retenciones = p_pct_retenciones
-        self.pct_obraSocial = p_pct_obra_social
+        self.pct_obra_social = p_pct_obra_social
 
 
     def calcular_sueldo_basico(self, hs_trabajadas):
@@ -37,7 +37,7 @@ class Liquidacion():
 
     def calcular_sueldo_neto(self, bruto):
         # Neto = bruto - retenciones - obra social
-        neto = bruto - (bruto * (self.pct_retenciones * 0.01)) - (bruto * (self.pct_obraSocial * 0.01))
+        neto = bruto - (bruto * (self.pct_retenciones * 0.01)) - (bruto * (self._s * 0.01))
         return round(neto,2)
 
     def calcular_sueldo_empleado(self, cant_hs_trabajadas, antiguedad_empleado):
