@@ -3,7 +3,7 @@
 # python -m pip install pytest
 
 import pytest
-import example.liquidacion as lq
+import funciones as lq
 
 def setup():
     # Se define en esta clase una instancia de la clase a testear
