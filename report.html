@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte de Suma de dos números</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h1 { color: #2c3e50; }
+    h2 { color: #2980b9; }
+    ul { list-style-type: none; padding-left: 0; }
+    li { margin-bottom: 0.5em; }
+    .given { color: #16a085; }
+    .when { color: #e67e22; }
+    .then { color: #8e44ad; }
+  </style>
+</head>
+<body>
+  <h1>Feature: Suma de dos números</h1>
+
+  <h2>Scenario: Sumar dos números positivos</h2>
+  <ul>
+    <li class="given"><strong>Given</strong> tengo los números 3 y 5</li>
+    <li class="when"><strong>When</strong> los sumo</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 8</li>
+  </ul>
+
+  <h2>Scenario: Sumar un número positivo y un número negativo</h2>
+  <ul>
+    <li class="given"><strong>Given</strong> tengo los números 7 y -2</li>
+    <li class="when"><strong>When</strong> los sumo</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 5</li>
+  </ul>
+
+  <h2>Scenario: Sumar dos números negativos</h2>
+  <ul>
+    <li class="given"><strong>Given</strong> tengo los números -4 y -6</li>
+    <li class="when"><strong>When</strong> los sumo</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser -10</li>
+  </ul>
+</body>
+</html>
