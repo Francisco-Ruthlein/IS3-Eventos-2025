@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte de Behave - Suma, Resta y Multiplicación</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h1 { color: #2c3e50; }
+    h2 { color: #2980b9; }
+    ul { list-style-type: none; padding-left: 0; }
+    li { margin-bottom: 0.5em; }
+    .given { color: #16a085; }
+    .when { color: #e67e22; }
+    .then { color: #8e44ad; }
+    .error { color: #c0392b; background: #f9e6e6; padding: 0.5em; border-radius: 5px; }
+    .ok { color: #27ae60; }
+    .fail { color: #c0392b; }
+  </style>
+</head>
+<body>
+  <h1>Reporte de Behave - Suma, Resta y Multiplicación</h1>
+
+  <h2>Feature: Multiplicación de dos números</h2>
+  <ul>
+    <li><strong>Scenario:</strong> Multiplicar dos números positivos <span class="ok">✔️</span></li>
+    <li class="given"><strong>Given</strong> tengo los números 4 y 5</li>
+    <li class="when"><strong>When</strong> los multiplico</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 20</li>
+  </ul>
+  <ul>
+    <li><strong>Scenario:</strong> Multiplicar por cero <span class="ok">✔️</span></li>
+    <li class="given"><strong>Given</strong> tengo los números 7 y 0</li>
+    <li class="when"><strong>When</strong> los multiplico</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 0</li>
+  </ul>
+
+  <h2>Feature: Resta de dos números</h2>
+  <ul>
+    <li><strong>Scenario:</strong> Restar dos números positivos <span class="ok">✔️</span></li>
+    <li class="given"><strong>Given</strong> tengo los números 10 y 4</li>
+    <li class="when"><strong>When</strong> los resto</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 6</li>
+  </ul>
+  <ul>
+    <li><strong>Scenario:</strong> Restar un positivo y un negativo <span class="ok">✔️</span></li>
+    <li class="given"><strong>Given</strong> tengo los números 5 y -3</li>
+    <li class="when"><strong>When</strong> los resto</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 8</li>
+  </ul>
+
+  <h2>Feature: Suma de dos números</h2>
+  <ul>
+    <li><strong>Scenario:</strong> Sumar dos números positivos <span class="fail">❌</span></li>
+    <li class="given"><strong>Given</strong> tengo los números 3 y 5</li>
+    <li class="when"><strong>When</strong> los sumo</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 8</li>
+    <li class="error">
+      <strong>Error:</strong> AttributeError: 'Context' object has no attribute 'a'
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Scenario:</strong> Sumar un número positivo y un número negativo <span class="fail">❌</span></li>
+    <li class="given"><strong>Given</strong> tengo los números 7 y -2</li>
+    <li class="when"><strong>When</strong> los sumo</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser 5</li>
+    <li class="error">
+      <strong>Error:</strong> AttributeError: 'Context' object has no attribute 'a'
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Scenario:</strong> Sumar dos números negativos <span class="fail">❌</span></li>
+    <li class="given"><strong>Given</strong> tengo los números -4 y -6</li>
+    <li class="when"><strong>When</strong> los sumo</li>
+    <li class="then"><strong>Then</strong> el resultado debe ser -10</li>
+    <li class="error">
+      <strong>Error:</strong> AttributeError: 'Context' object has no attribute 'a'
+    </li>
+  </ul>
+</body>
+</html>
